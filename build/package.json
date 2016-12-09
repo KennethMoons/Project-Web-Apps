@@ -2,26 +2,25 @@
   "name": "Project-Web-Apps",
   "version": "1.0.0",
   "description": "",
-  "main": "Server.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "angular-youtube-embed": "^1.3.1",
     "mongoose": "^4.7.1",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Server.js"
-  },
-  "engines" : {
-  	"node" : "4.6.1",
-  	"npm" : "2.15.9"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KennethMoons/Project-Web-Apps.git"
   },
   "keywords": [],
-  "author": "kenneth",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KennethMoons/Project-Web-Apps/issues"

@@ -1,14 +1,12 @@
 var express = require('express');
 var app = express();
-var mongoose = require('mongoose');
-var collections = ["gebruikers","blurays"];
-var connection = require('./connection');
+var mongojs = require('mongojs');
+var collections = ["gebruikers","blurays"]
+var db = mongojs('mongodb://kenneth:telenet2017@ds119368.mlab.com:19368/bluraylist', collections);
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-
-mongoose.connect(connection.connectionString);
 
 
 
@@ -75,6 +73,6 @@ app.put('/blurays/:id', function (req, res) {
   );
 });
 
-var Port = process.env.PORT || 3000;
+var Port = process.env.PORT;
 app.listen(Port);
 console.log("server running on port " + Port);
