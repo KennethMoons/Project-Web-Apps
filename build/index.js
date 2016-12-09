@@ -1,13 +1,15 @@
 var express = require('express');
 var app = express();
+
 var mongojs = require('mongojs');
 var collections = ["gebruikers","blurays"]
 var db = mongojs('mongodb://kenneth:telenet2017@ds119368.mlab.com:19368/bluraylist', collections);
 var bodyParser = require('body-parser');
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-
 
 
 app.get('/gebruikers', function (req, res) {
@@ -73,6 +75,8 @@ app.put('/blurays/:id', function (req, res) {
   );
 });
 
-var Port = process.env.PORT;
-app.listen(Port);
-console.log("server running on port " + Port);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+
+
