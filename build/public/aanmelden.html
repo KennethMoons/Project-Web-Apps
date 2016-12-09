@@ -1,0 +1,14 @@
+<h1>aanmelden</h1>
+<form class="form-inline" style="margin-top: 50px">
+  <div class="form-group">
+    <label for="exampleInputName2">email</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="u email" ng-model="preAanmelding.email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2" style="margin-left: 25px" >wachtwoord</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" ng-model="preAanmelding.wachtwoord">
+  </div>
+  <button type="submit" class="btn btn-primary" ng-click="LogOn()">aanmelden</button>
+  <button type="submit" class="btn btn-primary" ng-click="Registreren()">registreren</button>
+</form>
+<div error-message></div>

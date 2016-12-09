@@ -1,0 +1,24 @@
+<h1>registreer</h1>
+<form style="margin-top: 50px">
+  <div class="form-group">
+    <label for="exampleInputName2">email</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="u email" ng-model="gebruikerRegistratie.email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">wachtwoord</label>
+    <input type="password" class="form-control" id="exampleInputEmail2" ng-model="gebruikerRegistratie.wachtwoord">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2" >naam</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" ng-model="gebruikerRegistratie.naam">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2" >voornaam</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" ng-model="gebruikerRegistratie.voornaam">
+  </div>
+  <div class="form-group">
+  <button type="submit" class="btn btn-primary" ng-click="addGebruiker()">registreren</button>
+  <button type="submit" class="btn btn-primary" ng-click="AnnulerenRegistratie()">annuleren</button>
+   </div>
+  
+</form>

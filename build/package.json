@@ -1,0 +1,30 @@
+{
+  "name": "Project-Web-Apps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.1",
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js"
+  },
+  "engines" : {
+  	"node" : "4.6.1",
+  	"npm" : "2.15.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KennethMoons/Project-Web-Apps.git"
+  },
+  "keywords": [],
+  "author": "kenneth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KennethMoons/Project-Web-Apps/issues"
+  },
+  "homepage": "https://github.com/KennethMoons/Project-Web-Apps#readme"
+}
