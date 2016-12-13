@@ -1,0 +1,36 @@
+h1 { color: #3399FF; font-family: verdana; border: 1px solid powderblue; }
+
+/*animations */
+
+/* The starting CSS styles for the enter animation */
+main.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+#bodyList tr.ng-enter{
+	transition:0.2s linear all;
+  opacity:0;
+}
+#bodyList tr.ng-enter.ng-enter-active {
+	opacity:1;
+}
+
+#bodyList tr.ng-leave{
+	transition:0.2s linear all;
+  opacity:1;
+  transform: translateX(0);
+}
+#bodyList tr.ng-leave.ng-leave-active {
+	opacity:0;
+	transform: translateX(100%);
+}
+
+
+
+/*# sourceMappingURL=style.css.map */

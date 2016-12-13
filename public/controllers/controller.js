@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ui.router']);
+var myApp = angular.module('myApp', ['ui.router', 'ngAnimate']);
 
 myApp.directive('errorMessage',function(){
   return {
@@ -58,6 +58,7 @@ myApp.controller('AppCtrl', ['$scope', '$http','$location', function($scope, $ht
 var refresh = function() {
   $http.get('/blurays').success(function(response) {
     console.log("I got the data I requested");
+    $scope.bluraylist = {};
     var gebruikerblurayList = response;
     var teller = 0;
     for(var i = 0 ; i < gebruikerblurayList.length;i++){
@@ -68,6 +69,7 @@ var refresh = function() {
     };
   });
 };
+
 
 $scope.goToCreate = function(){
 	$location.path('/create');
@@ -138,20 +140,21 @@ $scope.addGebruiker = function() {
 };
 
 $scope.LogOn = function(){
+  
   $http.get('/gebruikers').success(function(response) {
     console.log("I got the data I requested");
     postAanmelding = response;
     for(var i = 0 ; i < postAanmelding.length;i++){
       if(postAanmelding[i].email == $scope.preAanmelding.email && postAanmelding[i].wachtwoord == $scope.preAanmelding.wachtwoord){
         $scope.bluray.gebruiker = postAanmelding[i]._id;
-        refresh();
         $location.path('/home');
-        return;
       };
-    };
+    };    
   });
   $scope.errorMsg = "aanmelden niet gelukt. wachtwoord of email niet in orde";
   $location.path('/aanmelden');
+  refresh();
+  
 };
 
 }]);﻿
